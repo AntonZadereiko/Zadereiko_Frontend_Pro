@@ -27,7 +27,6 @@ if (sport === 'футбол'){
     userSport = 'Чудовий вибір!';
 }
 
-alert(`Ваш вік ${age}. \n${userCity} \n${userSport}`);
 
 if (birth == null){
     alert(`Шкода, що Ви не захотіли ввести свою дату народження(`);
@@ -35,4 +34,6 @@ if (birth == null){
     alert(`Шкода, що Ви не захотіли ввести своє місце проживання(`);
 }  else if (sport == null){
     alert(`Шкода, що Ви не захотіли ввести свій улюблений вид спорту(`);
+} else{
+    alert(`Ваш вік ${age}. \n${userCity} \n${userSport}`);
 }
