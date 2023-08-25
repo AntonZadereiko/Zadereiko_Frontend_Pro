@@ -7,16 +7,16 @@ let result = '';
 let operatorValue = '';
 
 if(askUser === 'add'){
-    result = (firstNumber + secondNumber) ,
+    result = (firstNumber + secondNumber)
         operatorValue = ' + ';
 } else if (askUser === 'sub'){
-    result = (firstNumber - secondNumber) ,
+    result = (firstNumber - secondNumber)
         operatorValue = '-';
 } else if (askUser === 'mul'){
-    result = (firstNumber * secondNumber) ,
+    result = (firstNumber * secondNumber)
         operatorValue = '*';
 } else if (askUser === 'div'){
-    result = (firstNumber / secondNumber) ,
+    result = (firstNumber / secondNumber) 
         operatorValue = '/';
 } else {
     alert('Invalid operator');
