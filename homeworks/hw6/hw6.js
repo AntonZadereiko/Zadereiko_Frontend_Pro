@@ -38,11 +38,11 @@
 
 // 6 Знайти середнє арифметичне всіх цілих чисел від 1 до 500.
 
-// let middle = 0;
+// let average = 0;
 // for (let i = 1; i <= 500; i++) {
-//     middle += i / 500;
+//     average += i / 500;
 // }
-// alert(middle);
+// alert(average);
 
 // 7 Вивести суму лише парних чисел в діапазоні від 30 до 80.
 
@@ -62,30 +62,29 @@
 
 // 9 10 11  Дано натуральне число. Знайти та вивести на сторінку всі його дільники. Визначити кількість його парних дільників.
 // Знайти суму його парних дільників.
-
- let natNum = 30;
- let divNum = 0;
- let sumNum = 0;
- for (let i = 1; i <= natNum; i++) {
-     if (natNum % i === 0) {
-         alert('Дільник цього числа:' + i);
-         if (i % 2 === 0) {
-            divNum++;
-             sumNum += i;
-         }
-     }
-}
-alert('Кількість парних дільників : ' + divNum);
-alert('Сума парних дільників : ' + sumNum);
+//
+//  let natNum = 30;
+//  let divNum = 0;
+//  let sumNum = 0;
+//  for (let i = 1; i <= natNum; i++) {
+//      if (natNum % i === 0) {
+//          alert('Дільник цього числа:' + i);
+//          if (i % 2 === 0) {
+//             divNum++;
+//              sumNum += i;
+//          }
+//      }
+// }
+// alert('Кількість парних дільників : ' + divNum);
+// alert('Сума парних дільників : ' + sumNum);
 
 // 12 Надрукувати повну таблицю множення від 1 до 10.
 
-// let tableNums = '';
-//     for (let i = 1; i < 11; i++) {
-//         for (let j = 1; j < 11; j++) {
-//             tableNums  += (j*i) + " ";
-//         }
-//         alert("Таблиця множення на " + i);
-//         alert(tableNums);
-//         tableNums = '';
-//     }
+let tableNums = '';
+    for (let i = 1; i < 11; i++) {
+        for (let j = 1; j < 11; j++) {
+            tableNums  += (j*i) + " ";
+        }
+        alert("Таблиця множення на " + i + "\n" + tableNums);
+         tableNums = '';
+    }
