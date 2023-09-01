@@ -102,19 +102,19 @@
 // console.log( 'Добуток позитивних елементів : ' + divPositive);
 
 // 10 Знайти найбільший серед елементів масиву, остальні обнулити.
-// let arr =  [16,-37,54,-4,72,-56,47,4, -16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
-// let maxElement = arr[0];
-// for (let element of arr) {
-//     if (element > maxElement) {
-//         maxElement = element;
-//     }
-// }
-// console.log('Найбільший серед елементів масиву : ' + maxElement);
-// for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] !== maxElement) {
-//         arr[i] = 0;
-//     }
-// }
-// console.log("Масив після обнулення : " + arr);
+let arr =  [16,-37,54,-4,72,-56,47,4, -16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
+let maxElement = arr[0];
+for (let element of arr) {
+    if (element > maxElement) {
+        maxElement = element;
+    }
+}
+console.log('Найбільший серед елементів масиву : ' + maxElement);
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] !== maxElement) {
+        arr[i] = 0;
+    }
+}
+console.log("Масив після обнулення : " + arr);
 
 
