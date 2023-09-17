@@ -1,14 +1,13 @@
 
-function createSum () {
-    let sum = 0;
-    function addNumber (value) {
-        sum += value;
-        return sum;
-    }
-    return addNumber;
-}
 
-const sum = createSum();
+const sum = (function () {
+    let startingValue = 0;
+
+    return function (value) {
+        startingValue += value;
+        return startingValue;
+    };
+})();
 
 console.log(sum(3));
 console.log(sum(5));
