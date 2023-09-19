@@ -7,4 +7,4 @@ function pow (num, degree) {
     }
 
 }
-console.log(pow(8, 3));
+console.log(pow(10, 3));

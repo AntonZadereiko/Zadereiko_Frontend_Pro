@@ -80,11 +80,11 @@
 
 // 12 Надрукувати повну таблицю множення від 1 до 10.
 
-let tableNums = '';
-    for (let i = 1; i < 11; i++) {
-        for (let j = 1; j < 11; j++) {
-            tableNums  += (j*i) + " ";
-        }
-        alert("Таблиця множення на " + i + "\n" + tableNums);
-         tableNums = '';
-    }
+// let tableNums = '';
+//     for (let i = 1; i < 11; i++) {
+//         for (let j = 1; j < 11; j++) {
+//             tableNums  += (j*i) + " ";
+//         }
+//         alert("Таблиця множення на " + i + "\n" + tableNums);
+//          tableNums = '';
+//     }
