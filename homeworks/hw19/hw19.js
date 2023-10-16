@@ -62,10 +62,8 @@ const startButton = document.getElementById("start-button");
 const pauseButton = document.getElementById("pause-button");
 const resetButton = document.getElementById("reset-button");
 
-// Створюємо об'єкт StopWatch
 const stopwatch = new StopWatch(updateTimeDisplay);
 
-// Функція для оновлення відображеного часу
 function updateTimeDisplay(time) {
     const formattedTime = `${String(time.hours).padStart(2, "0")}:${String(time.minutes).padStart(2, "0")}:${String(time.seconds).padStart(2, "0")}`;
     timeDisplay.innerText = formattedTime;
