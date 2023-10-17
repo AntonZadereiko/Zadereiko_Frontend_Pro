@@ -6,9 +6,17 @@ class StopWatch {
         this.seconds = 0;
         this.timeoutId = null;
         this.isPaused = false;
+        this.isRunning = false;
     }
     start(){
-        this.tick();
+      //  this.tick();
+        if (!this.isRunning) {
+            this.isRunning = true;
+            this.tick();
+        } else if (this.isPaused) {
+            this.isPaused = false;
+            this.tick();
+        }
     }
     tick() {
         this.seconds++;
