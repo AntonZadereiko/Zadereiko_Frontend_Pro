@@ -12,8 +12,7 @@ class User {
         this.lastName = lastName;
         Object.defineProperty(this, 'role', {
             value: role,
-            writable: false,
-            configurable: false,
+            enumerable: true,
         });
     }
 }
