@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/submit" method="post" id="registrationForm">
+    <label for="first_name">First name:</label>
+    <input pattern="[A-Za-z]+" type="text" id="first_name" name="first_name" required><br><br>
+
+    <label for="last_name">Last name:</label>
+    <input pattern="[A-Za-z]+" type="text" id="last_name" name="last_name" required><br><br>
+
+    <label for="birthdate">Date of birth:</label>
+    <input type="date" id="birthdate" name="birthdate"><br><br>
+
+    <label>Gender:</label><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br><br>
+
+    <label for="city">City:</label>
+    <select id="city" name="city">
+        <option value="Kyiv">Kyiv</option>
+        <option selected value="Lviv">Lviv</option>
+        <option value="Dnipro">Dnipro</option>
+        <option value="Odessa">Odessa</option>
+        <option value="Other city">Other city</option>
+
+    </select><br><br>
+
+    <label for="address">Address:</label><br>
+    <textarea id="address" name="address" rows="4" cols="40" maxlength="200"></textarea><br><br>
+
+    <label>Languages:</label><br>
+    <input type="checkbox" id="english" name="languages[]" value="english">
+    <label for="english">English</label><br>
+    <input type="checkbox" id="spanish" name="languages[]" value="spanish">
+    <label for="spanish">Spanish</label><br>
+    <input type="checkbox" id="french" name="languages[]" value="french">
+    <label for="french">French</label><br>
+    <input type="checkbox" id="german" name="languages[]" value="french">
+    <label for="french">German</label><br>
+
+
+    <br><br>
+    <button type="submit" value="save">Save</button>
+</form>
+<div id="userData"></div>
+<script src="/homeworks/hw22/hw22.js"></script>
+</body>
+</html>
