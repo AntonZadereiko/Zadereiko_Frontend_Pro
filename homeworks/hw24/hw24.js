@@ -1,6 +1,9 @@
 function toCamelCase(input) {
-    return input.replace(/_([a-z])/g, (match, group) => group.toUpperCase() );
+    return input.replace(/_([a-z])/g, function (match, group) {
+        return group.toUpperCase();
+    } );
 }
+
 
 console.log(toCamelCase('hello_world_its_me'));
 console.log(toCamelCase('very_long_property_name'));
