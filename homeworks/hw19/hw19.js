@@ -4,20 +4,15 @@ class StopWatch {
         this.hours = 0;
         this.minutes = 0;
         this.seconds = 0;
-        this.timeoutId = null;
-        this.isPaused = false;
-        this.isRunning = false;
+        this.intervalId = null;
     }
-    start(){
-      //  this.tick();
-        if (!this.isRunning) {
-            this.isRunning = true;
+
+    start() {
+        this.intervalId = setInterval(() => {
             this.tick();
-        } else if (this.isPaused) {
-            this.isPaused = false;
-            this.tick();
-        }
+        }, 1000);
     }
+
     tick() {
         this.seconds++;
         if (this.seconds === 60) {
@@ -28,43 +23,27 @@ class StopWatch {
                 this.hours++;
             }
         }
-        const time = {
-            hours: this.hours,
-            minutes: this.minutes,
-            seconds: this.seconds
-        };
+        const time = { hours: this.hours, minutes: this.minutes, seconds: this.seconds };
         this.onTick(time);
+    }
 
-        this.timeoutId = setTimeout(() => {
-            this.tick();
-        }, 1000);
-    }
     pause() {
-        if (!this.isPaused) {
-            clearTimeout(this.timeoutId);
-            this.isPaused = true;
-        }
+        clearInterval(this.intervalId);
     }
-    resume() {
-        if (this.isPaused) {
-            this.isPaused = false;
-            this.start();
-        }
-    }
-    reset(){
+
+    reset() {
         this.pause();
-        this.seconds = 0;
-        this.minutes = 0;
         this.hours = 0;
+        this.minutes = 0;
+        this.seconds = 0;
     }
+
     getTime() {
-        return {
-            hours: this.hours,
-            minutes: this.minutes,
-            seconds: this.seconds
-        };
+        return { hours: this.hours, minutes: this.minutes, seconds: this.seconds };
     }
 }
+
+
 const timeDisplay = document.getElementById("time-display");
 const startButton = document.getElementById("start-button");
 const pauseButton = document.getElementById("pause-button");
