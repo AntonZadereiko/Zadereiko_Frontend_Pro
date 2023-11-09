@@ -25,5 +25,9 @@ button {
   background: green;
   color: white;
   border: none;
+  &:hover{
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+  }
 }
 }
