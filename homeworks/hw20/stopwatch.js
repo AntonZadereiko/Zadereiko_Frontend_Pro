@@ -1,4 +1,3 @@
-
 class StopWatch {
     constructor(onTick) {
         this.onTick = onTick;
@@ -6,14 +5,16 @@ class StopWatch {
         this.minutes = 0;
         this.seconds = 0;
         this.intervalId = null;
+        this.isRunning = false;
     }
-
     start() {
+        if (!this.isRunning){
+            clearInterval(this.intervalId);
+        }
         this.intervalId = setInterval(() => {
             this.tick();
         }, 1000);
     }
-
     tick() {
         this.seconds++;
         if (this.seconds === 60) {
@@ -27,37 +28,17 @@ class StopWatch {
         const time = { hours: this.hours, minutes: this.minutes, seconds: this.seconds };
         this.onTick(time);
     }
-
     pause() {
         clearInterval(this.intervalId);
     }
-
     reset() {
         this.pause();
         this.hours = 0;
         this.minutes = 0;
         this.seconds = 0;
     }
-
     getTime() {
         return { hours: this.hours, minutes: this.minutes, seconds: this.seconds };
     }
 }
-
-// examples
-// const onTick = (time) => console.log(time);
-// const stopWatch = new StopWatch(onTick);
-//
-// stopWatch.start();
-
-// paused in 3 seconds
-// setTimeout(() => {
-//     stopWatch.pause();
-//     console.log(stopWatch.getTime());
-// }, 3000);
-//
-// // in 5 seconds do reset
-// setTimeout(() => {
-//     stopWatch.reset();
-//     console.log(stopWatch.getTime());
-// }, 5000);
+export default StopWatch;

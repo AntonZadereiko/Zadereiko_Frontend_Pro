@@ -1,0 +1,29 @@
+button{
+  padding: 5px;
+  background: red;
+  color: black;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+  &:last-of-type{
+    margin-right: 0;
+  }
+  &:hover{
+    background: black;
+    color: white;
+  }
+}
+#stopwatch{
+  font-size: 25px;
+  margin-left: 30px;
+}
+#timer{
+  margin-left: 5px;
+button {
+  padding: 10px;
+  font-size: 30px;
+  background: green;
+  color: white;
+  border: none;
+}
+}
