@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Домашня сторінка</h1>
+    <a href="./about.html">Про нас</a>
+    <button id="showMessageBtn">Show message</button>
+    <div id="messageContainer"></div>
+  
+    
+    <script>
+        document.getElementById('showMessageBtn').addEventListener('click', async () => {
+    try {
+      const response = await fetch('/api/message');
+      const data = await response.json();
+      document.getElementById('messageContainer').innerText = data.message;
+    } catch (error) {
+      console.error('Помилка отримання повідомлення:', error);
+      document.getElementById('messageContainer').innerText = 'Сталася помилка при отриманні повідомлення.';
+    }
+  }); 
+    </script>
+</body>
+</html>
