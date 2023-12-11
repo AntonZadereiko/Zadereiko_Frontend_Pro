@@ -20,7 +20,7 @@ function getWeather() {
             document.getElementById("weather-icon").src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
         }
     };
-
+// why problem in xhr.send() ?
     xhr.send();
 }
 
