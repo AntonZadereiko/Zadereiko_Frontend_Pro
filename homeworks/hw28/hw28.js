@@ -2,8 +2,8 @@ function getWeather() {
     const xhr = new XMLHttpRequest();
     const city = "LVIV";
     const apiKey = "5d066958a60d315387d9492393935c19";
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${apiKey}`;
-
+   // const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${apiKey}`;
+   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${apiKey}`;
     xhr.open("GET", url, true);
 
     xhr.onreadystatechange = function () {
