@@ -33,12 +33,12 @@ function getWeather() {
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            document.getElementById("temperature").innerHTML = `Температура: ${data.main.temp}°C`;
-            document.getElementById("pressure").innerHTML = `Тиск: ${data.main.pressure} hPa`;
-            document.getElementById("description").innerHTML = `Опис: ${data.weather[0].description}`;
-            document.getElementById("humidity").innerHTML = `Вологість: ${data.main.humidity}%`;
-            document.getElementById("wind-speed").innerHTML = `Швидкість вітру: ${data.wind.speed} м/с`;
-            document.getElementById("wind-direction").innerHTML = `Напрям вітру: ${data.wind.deg}°`;
+            document.getElementById("temperature").innerHTML = `${data.main.temp}°C`;
+            document.getElementById("pressure").innerHTML = ` ${data.main.pressure} hPa`;
+            document.getElementById("description").innerHTML = `${data.weather[0].description}`;
+            document.getElementById("humidity").innerHTML = ` ${data.main.humidity}%`;
+            document.getElementById("wind-speed").innerHTML = ` ${data.wind.speed} м/с`;
+            document.getElementById("wind-direction").innerHTML = ` ${data.wind.deg}°`;
             document.getElementById("weather-icon").src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
         })
         .catch(error => console.error('Помилка при отриманні погоди:', error));
