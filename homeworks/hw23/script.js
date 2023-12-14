@@ -115,7 +115,7 @@ const eventedPushState = (state, title, url) => {
   });
   basketBtn.addEventListener("click", () => {
     eventedPushState("Basket", "", "basket");
-    basketBox.style.display = "flex"
+    // basketBox.style.display = "flex"
   });
   
   let basket = [];
