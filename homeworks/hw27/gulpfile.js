@@ -5,24 +5,24 @@ const uglify = require('gulp-uglify');
 
 // Компіляція SASS в CSS
 gulp.task('sass', function () {
-  return gulp.src('homeworks/hw24/src/scss/**/*.scss')
+  return gulp.src('homeworks/hw27/src/scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('homeworks/hw24/dist/css'));
+    .pipe(gulp.dest('homeworks/hw27/dist/css'));
 });
 
 
 // Конкатенація та мінімізація JS
 gulp.task('scripts', function () {
-  return gulp.src('homeworks/hw24/src/**/*.js')
+  return gulp.src('homeworks/hw27/src/**/*.js')
     .pipe(concat('main.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('homeworks/hw24/dist/js'));
+    .pipe(gulp.dest('homeworks/hw27/dist/js'));
 });
 
 // Спостереження за змінами у файлах
 gulp.task('watch', function () {
-  gulp.watch('homeworks/hw24/src/scss/**/*.scss', gulp.series('sass'));
-  gulp.watch('homeworks/hw24/src/js/**/*.js', gulp.series('js'));
+  gulp.watch('homeworks/hw27/src/scss/**/*.scss', gulp.series('sass'));
+  gulp.watch('homeworks/hw27/src/js/**/*.js', gulp.series('js'));
 });
 
 // Запуск завдань за замовчуванням
