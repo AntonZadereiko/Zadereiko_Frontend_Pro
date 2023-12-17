@@ -1,8 +1,8 @@
 .input {
-    width: 100%;
+    width: 98.5%;
     outline: none;
     border: 2px solid yellowgreen;
-    padding: 10px;
+    padding: 10px 0 10px 10px;
     font-size: 20px;
     border-radius: 5px;
 }
